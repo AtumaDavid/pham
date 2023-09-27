@@ -1,0 +1,52 @@
+.sum_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.sum_head h2{
+    font-size: 1rem;
+    text-align: left;
+}
+
+.sum_head h2 p{
+    font-size: 0.8rem;
+    padding-top: 1.2rem;
+}
+
+.summary{
+    border: 2px solid #009FE3;
+    width: 100%;
+    height: fit-content;
+}
+
+.details_head{
+    width: 100%;
+}
+.details_head th{
+    font-size: 0.8rem;
+    border: 1px solid #009FE3;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.details_head th:nth-child(1) {
+    border-left: none;
+  
+
+  }
+  
+  .details_head th:nth-child(2) {
+    
+  }
+  
+  .details_head th:nth-child(3) {
+  
+  }
+  
+  .details_head th:nth-child(4) {
+   border-right: none;
+   
+  }

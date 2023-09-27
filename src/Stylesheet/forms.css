@@ -1,0 +1,613 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(45, 44, 44, 0.4);
+  margin: 2rem 1rem 3rem 16rem;
+}
+
+.progress-bar {
+  align-self: center;
+  z-index: -1;
+  width: 100%;
+  transform: scale(110%);
+  height: 2px;
+  background-color: rgba(45, 44, 44, 0.4);
+  justify-self: center;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #0099ff;
+  width: 0%;
+}
+.progress-step {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  /* justify-self: center; */
+  font-size: 800;
+  align-items: center;
+
+  /* width: 100%; */
+}
+
+.progress-indicators {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.progress-indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-indicator span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 44, 44, 0.4);
+  background-color: #fff;
+  color: #2d2c2c;
+  font-size: 1rem;
+}
+
+.progress-step.active .progress-indicator span {
+  border-color: #0099ff;
+  color: #0099ff;
+}
+
+.progress-step.active .progress-indicator span svg {
+  color: white;
+  border-color: #0099ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #0099ff;
+}
+
+.progress-label {
+  color: #4b4b4b;
+  font-size: 1rem;
+  font-style: normal;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.48px;
+  position: absolute;
+  bottom: -10;
+  padding-top: 2rem;
+}
+
+.progress-step.active .progress-label {
+  color: #0099ff;
+}
+
+.progress-indicators {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.form-content {
+  width: 60%;
+  
+}
+.steps::-webkit-scrollbar {
+  width: 6px;
+  padding: 5px;
+}
+.steps::-webkit-scrollbar-thumb {
+  width: 4px;
+  background-color: #0099ff;
+  border-radius: 9px;
+}
+
+.form_btn {
+  margin: 2rem 1.5rem;
+  gap: 1.5rem;
+  display: flex;
+  float: right !important;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.form_btn button {
+  
+  
+    min-width: 8rem;
+    border-radius: 8px;
+    background:  #009FE3;
+    color: #FFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.48px;
+    padding: 0.5rem 0;
+
+
+  }
+
+  .back{
+    border-radius: 8px;
+    background: white !important;
+border: 1px solid #009FE3 !important;
+color: #009FE3 !important;
+  }
+ 
+
+.steps{
+  margin: 1.5rem 0 3rem 0;
+  border-radius: 10px;
+  border: 1px solid rgba(45, 44, 44, 0.4);
+  display: flex;
+  flex-direction: column;
+  height: 88vh;
+  overflow-y: scroll;
+  width: 100%;  
+ 
+
+}
+
+.inst{
+  height: fit-content;
+}
+
+
+.steps h1 {
+  color: rgba(45, 44, 44, 0.8);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  letter-spacing: 0.6px;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.step_form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.step_input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step_input,
+.step_inputs label {
+  color: #4b4b4b;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+}
+
+.step_input input,
+select,
+textarea {
+  border-radius: 8px;
+  border: 1.4px solid #eaeaea;
+  background: #fff;
+}
+
+.step_input input,
+select {
+  padding: 0.6rem;
+}
+
+.step_inputs {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.step_inputs input,
+select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1.4px solid #eaeaea;
+  background: #fff;
+  width: inherit;
+}
+
+.step_double {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  gap: 1rem;
+}
+
+.step_doubles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.step_double,
+.step_doubles .step_inputs {
+  box-sizing: border-box;
+}
+.step_double .slash {
+  font-size: 1.5rem;
+  color: #4b5b65;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-self: center;
+  padding-bottom: 0.5rem;
+}
+
+.step_input textarea {
+  padding: 0.5rem 1rem;
+  height: 8rem;
+  resize: none !important;
+}
+
+.drug_btn {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.drug_btn button {
+  padding: 0.4rem;
+  min-width: 7rem !important;
+  border-radius: 8px;
+  background: #4f4f4f;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 18px */
+  letter-spacing: 0.36px;
+}
+
+.remov {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #4f4f4f;
+  background-color: transparent !important;
+  color: #4f4f4f !important;
+}
+
+.custom-input {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1.4px solid #eaeaea;
+  background: #fff;
+  width: inherit;
+}
+
+.react-datepicker-popper {
+  z-index: 9999;
+}
+
+.drug_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.drug_table tbody {
+  border: 1px solid #d9d9d9;
+  width: 100%;
+}
+
+.drug_table th {
+  text-align: left;
+  padding-left: 0.6rem;
+  padding-bottom: 1rem;
+}
+
+.drug_table td {
+  padding: 0.6rem;
+  padding-left: none;
+  text-align: left;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.dos {
+  color: #0099ff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.check {
+  padding: none;
+  width: 2rem;
+}
+.drug_table > th {
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.entered-drugs h2 {
+  margin-left: 9.3rem;
+  margin-bottom: 1rem;
+  color: #4b4b4b;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+}
+
+.num {
+  color: #009fe3;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: -300%;
+  right: 0;
+  margin-right: 3rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.08);
+
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content button span {
+  margin-right: 0.6rem;
+}
+
+.dropdown-content button {
+  color: #4d4d4d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+}
+.dropdown-content button:hover {
+  background: rgba(217, 217, 217, 0.35);
+}
+
+.in_btn {
+  border-radius: 45px;
+  display: flex;
+  gap: 5px;
+  background: #009fe34a;
+  padding: 0.5rem;
+  width: 100%;
+  align-self: center;
+}
+.in_btn > button {
+  font-size: 1rem;
+  font-weight: 600;
+  width: fit-content;
+  color: #fff;
+  width: 100%;
+  padding: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 30px;
+}
+
+.in_btn button.active {
+  background-color: #009fe3;
+}
+
+.step_form h3 {
+  color: #4b4b4b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+  margin-left: 1rem;
+}
+
+.date {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.date label {
+  color: #4b4b4b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+  margin-left: 1rem;
+}
+
+.date input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1.4px solid #eaeaea;
+  background: #fff;
+}
+
+.one_time{
+  padding-bottom: 5rem;
+
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.appt_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 40px;
+}
+
+.appt_form label {
+  color: #4b4b4b;
+  text-align: left;
+  padding: 10px 0px 0px 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+}
+
+.appt_form input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  border: 1.4px solid #eaeaea;
+  border-radius: 8px;
+  display: flex;
+  padding: 14px;
+  align-items: center;
+}
+
+.titleInput::placeholder {
+  color: #4b4b4b;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.48px;
+}
+
+.custom_date {
+  position: relative;
+  display: flex;
+}
+
+input[type="date"] {
+  text-transform: uppercase;
+}
+
+.custom_date input[type="date"] {
+  width: 700px;
+}
+
+.custom_date input[type="date"]::-webkit-calendar-picker-indicator {
+  content: url("../images/calendarIcon.svg");
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  /* position: absolute; */
+  /* right: 12%; */
+}
+
+.custom_time input[type="time"] {
+  width: 300px;
+}
+
+/* Add these styles to your stylesheet */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal appears on top of everything */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.document_button {
+  display: inline-flex;
+  padding: 12px 53px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #009fe3;
+  color: #fff;
+  width: 150px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.48px;
+}
+
+.note_title input[type="text"] {
+  padding: 7px;
+  outline: none;
+}
+
+.note_title input[type="text"]::placeholder {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.note_form textarea {
+  width: 482px;
+  height: 195px;
+  flex-shrink: 0;
+  margin-left: 4.5rem;
+}
+
+.amount_input {
+  border: 1.4px solid #eaeaea;
+  border-radius: 8px;
+  padding-left: 10px;
+}
+
+.amount_input input[type="text"] {
+  outline: none;
+  border: none;
+}
